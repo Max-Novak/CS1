@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <limits.h>
-#include <string.h>
 
 /*
 	Author: Max Novak
