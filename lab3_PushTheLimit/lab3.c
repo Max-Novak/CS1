@@ -38,7 +38,7 @@ void repeatString(int num_repeat, char output_base[])
 	puts("");
 }
 
-int main(int argc, char *argv[])
+int main()
 {
 	printf("%30s%25s%25s\n", "data type", "minimum value", "maximum value");
 	repeatString(30, "-+-");
