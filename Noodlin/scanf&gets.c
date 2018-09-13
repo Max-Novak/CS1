@@ -20,7 +20,8 @@ int main()
 	input: max
 	pulls off m and leaves ax
 	[a, x, \x00, a, k, \x00...]
-
+	*/
+	
 	/*
 	scanf("%f", &float_num);
 	scanf("%f", &float_num);
