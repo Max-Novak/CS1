@@ -50,9 +50,14 @@ int main()
 	//calculate perimeter using 2*w + 2*h formula
 	perimeter = 2*width + 2*height;
 
-	//print calculated values to screen
-	printf("The calculated area is: %.4lf units\n", area);
-	printf("The calculated perimeter is: %.4lf units\n", perimeter);
+	//print cool Ascii art
+	printf("\n|||\n|||\nVVV\n\n");
+	//print calculated values and input values to screen
+	printf("%10s", "Height");
+	printf("%10s", "Width");
+	printf("%13s", "Perimeter");
+	printf("%11s", "Area\n");
+	printf("%10.2f %9.2f %12.2f %9.2f\n", width, height, perimeter, area);
 
 	//return with no error flags set
 	return 0;
