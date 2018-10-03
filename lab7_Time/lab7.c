@@ -20,8 +20,8 @@
 			a. use gets to take input for
 				* seconds_count
 		II. 
-			a. days = seconds % 864000
-			b. seconds %= 864000
+			a. days = seconds % 86400
+			b. seconds %= 86400
 			c. hours = seconds % 3600
 			d. seconds %= 3600
 			e. minutes = seconds % 60
@@ -51,8 +51,8 @@ int main()
 	//II
 	//Preform calculations using modulus
 	second_count = num_seconds;
-	day_count = second_count / 864000;
-	second_count %= 864000;
+	day_count = second_count / 86400;
+	second_count %= 86400;
 	hour_count = second_count / 3600;
 	second_count %= 3600;
 	minute_count = second_count / 60;
