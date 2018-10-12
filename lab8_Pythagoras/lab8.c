@@ -29,13 +29,13 @@
 //compilation requires -lm to link the math library
 #include <math.h>
 
-double sqrt(double x);
+//function prototype
 double calc_hypotenuse(double height, double width);
 
 double calc_hypotenuse(double height, double width)
 {
 	double hypotenuse;
-
+	//II.
 	hypotenuse = sqrt((height*height + width*width));
 
 	return hypotenuse;
