@@ -1,3 +1,41 @@
+/*
+	Author: Max Novak
+	Date: 10/16/2018
+	CS 1 Lab 10 - Functional Temperature Program
+	Pseudo Code
+	Phase 1:
+		- fahrenheit values, celsius values, distance from fahren to freezing 
+	Phase 2: 
+		- double fahrenheit1;
+		- double fahrenheit2;
+		- double fahrenheit3;
+		- double fahrenheit4;
+		- double fahren_to_celsius1;
+		- double fahren_to_celsius2;
+		- double fahren_to_celsius3;
+		- double fahren_to_celsius4;
+		- double fahren_freeze1;
+		- double fahren_freeze2;
+		- double fahren_freeze3;
+		- double fahren_freeze4;
+	Phase 3:
+		I. Declare values
+		II. Do math on the user inputted values
+		III. Output formatted data
+	Phase 4:
+		I.
+			a. Declare Values
+		II. 
+			a. Repeat function blocks following this format
+				1. Output formatted message to user to input
+				2. scanf to take in user input
+				3. convert fahrenheit to celsius
+				4. find distance from freezing of fahrenheit
+		III.
+			a. print formatted table with
+				* farhenheit, celius conversion, distance from freeze of fahrenheit, distance from freeze of celsius
+*/
+
 #include <stdio.h>
 
 double fahren_to_celsius(double fahrenheit);
@@ -64,6 +102,7 @@ int main()
 ******************************************/
 double fahren_to_celsius(double fahrenheit)
 {
+	//converts fahrenheit to celsius
 	double celsius;
 	celsius = (fahrenheit-32) * 5 / 9;
 	return celsius;
@@ -74,6 +113,7 @@ double fahren_to_celsius(double fahrenheit)
 ******************************************/
 double fahren_to_freeze(double fahrenheit)
 {
+	//determines the distance from freezing of a fahrenheit value
 	double fahren_freeze;
 	fahren_freeze = fahrenheit-32;
 	return fahren_freeze;
@@ -84,6 +124,7 @@ double fahren_to_freeze(double fahrenheit)
 ******************************************/
 void puts_fahrenheit()
 {
+	//hardcoded output 
 	puts("Enter a farhenheit values");
 	puts("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 }
@@ -93,5 +134,6 @@ void puts_fahrenheit()
 ******************************************/
 void temperature_print(double fahrenheit, double celsius, double f_to_freeze, double c_to_freeze)
 {
+	//prints formatted table
 	printf("%15.2lf %15.2lf %15.2lf %15.2lf\n", fahrenheit, celsius, f_to_freeze, c_to_freeze);
 }
