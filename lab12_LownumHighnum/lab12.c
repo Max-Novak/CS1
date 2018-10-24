@@ -4,15 +4,15 @@
 	CS 1 Lab 12 - LownumHighnum
 	Pseudo Code
 	Phase 1:
-		- low number, high number, high range, low range
+		- low number, high number, low index, low index
 	Phase 2: 
 		- int low_num;
 		- int high_num;
-		- char high_range;
-		- string low_range;
+		- int low_index, high_index;
 	Phase 3:
 		I. Take user input
 		II. Logic to find range of input
+		III. Display in a switch case tree
 		III. Output formatted table
 	Phase 4:
 		I.
@@ -21,20 +21,22 @@
 				* take input for low_num and high_num
 		II. 
 			a. Send input to check if the user inputted the correct answers to the prompts
-			b. Send input to print_range function
+			b. Send input to range function
+			c. Send index to display function to print correct range
 		III.
 			a.  Print the range, high, and low number in a well formatted table
 */
 
 #include <stdio.h>
 
-void print_range(int num);
+int range(int num);
+void display(int index);
 
 int main()
 {
 	//declare variables
 	int low_num, high_num;
-	char low_range, high_range;
+	int low_index, high_index;
 
 	//take user input
 	puts("Please input the lowest number: ");
@@ -50,12 +52,16 @@ int main()
 		high_num = temp;
 	}
 
-	//Print well formatted tables
-	//Also finds the ranges of both values
+	//Calculate index of ranges
+	low_index = range(low_num);
+	high_index = range(high_num);
+	
+	//Print output in well formatted table
 	printf("The value %d is being stored in the low_num variable. The value lies between the range ", low_num);
-	print_range(low_num);
-	printf("The value %d is being stored in the high_num variable. The value lies between the range ", high_num);
-	print_range(high_num);
+	display(low_index);
+	printf("\nThe value %d is being stored in the high_num variable. The value lies between the range ", high_num);
+	display(high_index);
+	puts("");
 
 	return 0;
 }
@@ -63,20 +69,47 @@ int main()
 /**********************************************
 * Find the range of which a value lies within *
 **********************************************/
-void print_range(int num)
+int range(int num)
 {
+	int index = 0;
 	//logic structure for determining number ranges
 	if(num < 0)
-		puts("below 0");
+		index = 1;
 	else
 		if(num >= 0 && num <= 50)
-			puts("0 to 50");
+			index = 2;
 		else
 			if(num >= 51 && num <= 100)
-				puts("51 to 100");
+				index = 3;
 			else
 				if(num >= 101 && num <= 150)
-					puts("101 to 150");
+					index = 4;
 				else
-					puts("above 150");
+					index = 5;
+	return index;
+}
+
+/**********************************************
+* Print the ranges of the indexs			  *
+**********************************************/
+void display(int index)
+{
+	switch(index)
+	{
+		case 1:
+			puts("below 0");
+			break;
+		case 2:
+			puts("0 to 50");
+			break;
+		case 3:
+			puts("51 to 100");
+			break;
+		case 4:
+			puts("101 to 150");
+			break;
+		case 5:
+			puts("above 150");
+			break;
+	}
 }
