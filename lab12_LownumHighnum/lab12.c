@@ -96,6 +96,7 @@ void display(int index)
 {
 	switch(index)
 	{
+		//Print ranges
 		case 1:
 			puts("below 0");
 			break;

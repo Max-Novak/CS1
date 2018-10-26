@@ -65,8 +65,8 @@ int main()
 		//print cool Ascii art
 		printf("\n|||\n|||\nVVV\n\n");
 		//print calculated values and input values to screen
-		printf("%10s", "Height");
 		printf("%10s", "Width");
+		printf("%10s", "Height");
 		printf("%13s", "Perimeter");
 		printf("%11s", "Area\n");
 		printf("%10.2f %9.2f %12.2f %9.2f\n", width, height, perimeter, area);
