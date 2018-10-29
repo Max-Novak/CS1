@@ -16,7 +16,7 @@
 		I.
 			a. Prompt user for input after asking questions
 			b. use gets to take in input
-				* take input for answer1,2,3
+				* take input for answer 1,2,3
 		II. 
 			a. Check all three answer choices
 		III.
@@ -51,17 +51,22 @@ int main()
 int get_answer_math_library()
 {
 	//declarations
-	char answer[32];
-	int test = 1;
+	int a;
 
 	puts("What is the include statement to add the built in C library capable of providing mathematical functions such as sqrt?");
-	gets(answer);
+	puts("(1) #include math;");
+	puts("(2) #include <mathlibrary.h>;");
+	puts("(3) #include <math.h>;");
+	puts("(4) #include <math>;")
+
+	//Take user input
+	scanf("%d", a);
 
 	//check answer to see if correct library inclusion statement was written
-	if(strcmp(answer, "#include <math.h>;") != 0)
+	switch(a)
 	{
-		test = 0;
-		puts("Incorrect: The header library titled \"math.h\" along with the default inclusion statement syntax is the correct answer");
+		case 1:
+			break;
 	}
 
 	return test;

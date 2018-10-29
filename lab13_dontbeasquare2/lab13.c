@@ -1,6 +1,6 @@
 /*
 	Author: Max Novak
-	Date: 10/20/2018
+	Date: 10/29/2018
 	CS 1 Lab 13 - Dontbeasquare2
 	Pseudo Code
 	Phase 1:
@@ -28,6 +28,7 @@
 		- declaring variables in functions
 		- how do programs determine which type of data you inputted
 			** letters break the program
+			** Santizing input
 */
 
 #include <stdio.h>
@@ -43,18 +44,18 @@ int main()
 	double area;
 	double perimeter;
 
-	while(width != -1 || height != -1)
+	while(1)
 	{
 		//outputs text to user and retrieves their input for width
 		puts("Type -1 to quit");
 		puts("Please input the rectangle's width");
-		fscanf(stdin, "%lf", &width);
+		scanf("%lf", &width);
 		if(width < 0)
 			break;
 
 		//outputs text to user and retrieves their input for height
 		puts("Please input the rectangle's height");
-		fscanf(stdin, "%lf", &height);
+		scanf("%lf", &height);
 		if(height < 0)
 			break;
 
