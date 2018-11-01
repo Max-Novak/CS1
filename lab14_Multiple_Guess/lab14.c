@@ -24,6 +24,7 @@
 
 Questions:
 	-How to compare strings without strcmp or your own compare function
+		**using switch cases
 */
 
 #include <stdio.h>
