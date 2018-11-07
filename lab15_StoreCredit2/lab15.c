@@ -47,7 +47,7 @@ int main()
 	int flag = 1;
 	puts("Welcome to the Credit Calc");
 	
-	while(flag)
+	while(flag == 1)
 	{
 		//Obtain per/user information
 		puts("Please input accnt number");
@@ -69,7 +69,7 @@ int main()
 		//ask user if they want to input another user's information
 		//**question: How does C determine logical truth
 		puts("Do you want to input another user's information? Input 1 to continue or 0 to end");
-		scanf("%d", flag);
+		scanf("%d", &flag);
 	}
 
     return 0;
